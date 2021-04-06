@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">SqliteLec10</string>
+    <string name="Name">Enter Student Name</string>
+    <string name="age">Enter Student Age</string>
+    <string name="isActive">Active or not</string>
+    <string name="ButtonAdd">Add Record</string>
+    <string name="ButtonView">View Record</string>
+
+</resources>
