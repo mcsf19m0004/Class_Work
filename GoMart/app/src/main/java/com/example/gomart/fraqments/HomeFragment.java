@@ -1,6 +1,7 @@
 package com.example.gomart.fraqments;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -13,12 +14,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
 import com.example.gomart.R;
+import com.example.gomart.activities.ShowAllActivity;
 import com.example.gomart.adapters.CategoryAdapter;
 import com.example.gomart.adapters.PopularAdapter;
 import com.example.gomart.adapters.newProductsAdapter;
@@ -40,6 +43,7 @@ public class HomeFragment extends Fragment {
 
 
 
+    TextView catShowAll,popularShowAll,newProductShowAll;
     LinearLayout linearLayout;
     ProgressDialog progressDialog;
     RecyclerView catRecyclerview, newProductRecyclerview, popularRecyclerview;
@@ -68,14 +72,39 @@ public class HomeFragment extends Fragment {
         // Inflate the layout for this fragment
         View root= inflater.inflate(R.layout.fragment_home, container, false);
 
+        db= FirebaseFirestore.getInstance();
+
         //progressDialog=new ProgressDialog(getActivity());
         catRecyclerview=root.findViewById(R.id.rec_category);
         newProductRecyclerview=root.findViewById(R.id.new_product_rec);
         popularRecyclerview=root.findViewById(R.id.popular_rec);
 
+        // show All product
+        catShowAll=root.findViewById(R.id.category_see_all);
+        popularShowAll=root.findViewById(R.id.popular_see_all);
+        newProductShowAll=root.findViewById(R.id.newProducts_see_all);
 
-        db= FirebaseFirestore.getInstance();
-
+        catShowAll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getContext(), ShowAllActivity.class);
+                startActivity(intent);
+            }
+        });
+        newProductShowAll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getContext(), ShowAllActivity.class);
+                startActivity(intent);
+            }
+        });
+        popularShowAll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getContext(), ShowAllActivity.class);
+                startActivity(intent);
+            }
+        });
        linearLayout=root.findViewById(R.id.home_layout);
        linearLayout.setVisibility(View.GONE);
         //image slider

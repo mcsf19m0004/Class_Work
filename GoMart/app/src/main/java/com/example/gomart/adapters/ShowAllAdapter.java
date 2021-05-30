@@ -14,29 +14,23 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.example.gomart.R;
 import com.example.gomart.activities.DetailedActivity;
-import com.example.gomart.models.NewProoductsModel;
-import com.example.gomart.models.PopularModel;
 
 import java.util.List;
 
-public class PopularAdapter extends RecyclerView.Adapter<PopularAdapter.ViewHolder> {
+public class ShowAllAdapter  extends RecyclerView.Adapter<ShowAllAdapter.ViewHolder> {
 
     private Context context;
-    private List<PopularModel> list;
-    public PopularAdapter(Context context, List<PopularModel> list)
-    {
-        this.context=context;
-        this.list=list;
-    }
+    private List<ShowAllAdapter> list;
+
     @NonNull
     @Override
-    public PopularAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new ViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.popular_product,parent,false));
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        return new ViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_show_all,parent,false));
     }
 
     @Override
-    public void onBindViewHolder(@NonNull PopularAdapter.ViewHolder holder, int position) {
-        Glide.with(context).load(list.get(position).getImg_url()).into(holder.newImg);
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+        Glide.with(context).load(list.get(position).getImg_url()).into(holder.mItemImage);
         holder.newName.setText(list.get(position).getName());
         holder.newPrice.setText(String.valueOf(list.get(position).getPrice()));
 
@@ -52,17 +46,19 @@ public class PopularAdapter extends RecyclerView.Adapter<PopularAdapter.ViewHold
 
     @Override
     public int getItemCount() {
-        return list.size();
+        return 0;
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        ImageView newImg;
-        TextView newName, newPrice;
+      private   ImageView mItemImg;
+       private TextView mName, mCost;
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            newImg=itemView.findViewById(R.id.all_img);
-            newName=itemView.findViewById(R.id.all_product_name);
-            newPrice=itemView.findViewById(R.id.all_price);
+
+            mItemImg=itemView.findViewById(R.id.item_image);
+            mName=itemView.findViewById(R.id.item_nam);
+            mCost=itemView.findViewById(R.id.item_cost);
         }
     }
 }
