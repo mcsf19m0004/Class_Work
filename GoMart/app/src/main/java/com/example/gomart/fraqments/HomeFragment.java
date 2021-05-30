@@ -178,7 +178,7 @@ public class HomeFragment extends Fragment {
         popularAdapter=new PopularAdapter(getContext(), popularModelList);
         newProductRecyclerview.setAdapter(categoryAdapter);
 
-        db.collection("NewProducts")
+        db.collection("AllProducts")
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     @Override

@@ -41,17 +41,17 @@ public class ShowAllAdapter extends RecyclerView.Adapter<ShowAllAdapter.ViewHold
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
         Glide.with(context).load(list.get(position).getImg_url()).into(holder.mItemImg);
-        holder.mName.setText(list.get(position).getName());
+        holder.mName.setText("$"+ list.get(position).getName());
         holder.mCost.setText(String.valueOf(list.get(position).getPrice()));
 
-      /*  holder.itemView.setOnClickListener(new View.OnClickListener() {
+       holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(context, DetailedActivity.class);
                 intent.putExtra("detailed", list.get(position));
                 context.startActivity(intent);
             }
-        });*/
+        });
 
     }
 
