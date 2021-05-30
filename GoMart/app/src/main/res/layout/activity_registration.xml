@@ -4,15 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.LoginActivity"
+    tools:context=".activities.RegistrationActivity"
     android:background="@drawable/bg1">
+
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
 
         android:layout_height="wrap_content"
         android:fontFamily="@font/aclonica"
-        android:text="SIGN IN"
+        android:text="SIGN UP"
         android:textColor="@color/textReading"
         android:textSize="40dp"
         android:textStyle="bold"
@@ -23,7 +25,20 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.316" />
 
-
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="0dp"
+        android:layout_height="57dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/edit_etxt_bg"
+        android:hint="Name"
+        android:padding="15dp"
+        android:elevation="3dp"
+        android:drawablePadding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
     <EditText
         android:id="@+id/gmail"
         android:layout_width="0dp"
@@ -37,7 +52,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/name" />
     <EditText
         android:id="@+id/password"
         android:inputType="numberPassword"
@@ -59,12 +74,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
-        android:onClick="signin"
+        android:onClick="signup"
         android:padding="15dp"
-        android:text="Sign In"
+        android:text="Sign Up"
         android:textSize="30dp"
         android:textStyle="bold"
-        android:backgroundTint="@color/pink"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.524"
@@ -78,7 +92,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="72dp"
         android:layout_marginBottom="32dp"
-        android:text="Do'nt have an account?"
+        android:text="Already have an account?"
         android:textSize="17dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -89,9 +103,9 @@
         android:id="@+id/signin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="signup"
-        android:text="Sign Up "
-        android:textColor="@color/blue"
+        android:onClick="signin"
+        android:text="Sign In "
+        android:textColor="@color/pink"
         android:textSize="25dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/textView2"
