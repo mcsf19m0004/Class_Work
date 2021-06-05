@@ -1,21 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity3"
-    android:orientation="vertical">
+    tools:context=".Fragment2">
+    <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/teal_200"
-        android:text="Fraqment 2"
-        android:textSize="36sp" />
-
+        android:id="@+id/text"
+        android:text="Fragment 2"
+        android:textSize="40sp" />
     <Button
         android:id="@+id/btn_frgm2"
+        android:layout_marginTop="30dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/teal_200"
+        android:layout_below="@id/text"
         android:text="Fragment 2 Button" />
-
-</LinearLayout>
+</RelativeLayout>
