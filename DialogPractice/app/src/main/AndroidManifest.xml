@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DialogPractice">
-        <activity android:name=".SimpleDialog"></activity>
+        <activity android:name=".CustomeDialog"></activity>
+        <activity android:name=".RateApp" />
+        <activity android:name=".NotDissmiseDialog" />
+        <activity android:name=".SimpleDialog" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

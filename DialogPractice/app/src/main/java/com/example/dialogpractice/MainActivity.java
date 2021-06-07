@@ -15,7 +15,22 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void simpleDialogButton(View view) {
-        Intent intent=new Intent(this, SimpleDialog.class);
+        Intent intent=new Intent(MainActivity.this, SimpleDialog.class);
+        startActivity(intent);
+    }
+
+    public void NotDissmis(View view) {
+        Intent intent=new Intent(MainActivity.this, NotDissmiseDialog.class);
+        startActivity(intent);
+    }
+
+    public void rateAct(View view) {
+        Intent intent=new Intent(MainActivity.this, RateApp.class);
+        startActivity(intent);
+    }
+
+    public void cutomeDailog(View view) {
+        Intent intent=new Intent(MainActivity.this, CustomeDialog.class);
         startActivity(intent);
     }
 }

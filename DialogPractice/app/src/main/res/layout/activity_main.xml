@@ -6,15 +6,46 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
     <Button
         android:id="@+id/simpleDailogbutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="124dp"
+        android:layout_marginTop="120dp"
+        android:onClick="simpleDialogButton"
         android:text="Simple Dialog with 1 Button"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:onClick="simpleDialogButton"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/notDissmisDailogbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:onClick="NotDissmis"
+        android:text="NotDismis"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/simpleDailogbutton" />
+    <Button
+        android:id="@+id/rateDailogbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:onClick="rateAct"
+        android:text="rate Dailog"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/notDissmisDailogbutton" />
+    <Button
+        android:id="@+id/customeDailogbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:onClick="cutomeDailog"
+        android:text="Custome Dailog"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rateDailogbutton" />
 </androidx.constraintlayout.widget.ConstraintLayout>

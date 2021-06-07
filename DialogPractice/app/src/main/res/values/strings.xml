@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">DialogPractice</string>
+
+    <string name="rate_dialog_title">Rate this app</string>
+    <string name="rate_dialog_message">play this app and enjoye</string>
+    <string name="rateDialogOk">Rate it now!</string>
+    <string name="rateDialogRemendr">Remind me later</string>
+    <string name="rateDialogCancle">No Thanks</string>
 </resources>

@@ -25,6 +25,7 @@ public class SimpleDialog extends AppCompatActivity {
         });
 
 
+
     }
     public void openDialog()
     {
@@ -34,7 +35,7 @@ public class SimpleDialog extends AppCompatActivity {
     }
 
     public void sBack(View view) {
-        Intent intent=new Intent(this,MainActivity.class);
+        Intent intent=new Intent(SimpleDialog.this,MainActivity.class);
         startActivity(intent);
     }
 }
