@@ -53,19 +53,21 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/name" />
+
     <EditText
         android:id="@+id/password"
-        android:inputType="numberPassword"
         android:layout_width="0dp"
         android:layout_height="57dp"
         android:layout_margin="10dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/edit_etxt_bg"
-        android:hint="Password"
-        android:padding="15dp"
-        android:elevation="3dp"
         android:drawablePadding="10dp"
+        android:elevation="3dp"
+        android:hint="Password"
+        android:inputType="numberPassword"
+        android:padding="15dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/gmail" />
 

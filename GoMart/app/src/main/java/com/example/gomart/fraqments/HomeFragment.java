@@ -44,8 +44,8 @@ public class HomeFragment extends Fragment {
 
 
     TextView catShowAll,popularShowAll,newProductShowAll;
-    LinearLayout linearLayout;
-    ProgressDialog progressDialog;
+    //LinearLayout linearLayout;
+   // ProgressDialog progressDialog;
     RecyclerView catRecyclerview, newProductRecyclerview, popularRecyclerview;
 
    //Category recyclerView
@@ -73,6 +73,7 @@ public class HomeFragment extends Fragment {
         View root= inflater.inflate(R.layout.fragment_home, container, false);
 
         db= FirebaseFirestore.getInstance();
+
 
         //progressDialog=new ProgressDialog(getActivity());
         catRecyclerview=root.findViewById(R.id.rec_category);
@@ -105,8 +106,8 @@ public class HomeFragment extends Fragment {
                 startActivity(intent);
             }
         });
-       linearLayout=root.findViewById(R.id.home_layout);
-       linearLayout.setVisibility(View.GONE);
+      // linearLayout=root.findViewById(R.id.home_layout);
+     //  linearLayout.setVisibility(View.GONE);
         //image slider
         ImageSlider imageSlider=root.findViewById(R.id.image_slider);
         List<SlideModel> slideModelList=new ArrayList<>();
@@ -116,10 +117,10 @@ public class HomeFragment extends Fragment {
 
 
         imageSlider.setImageList(slideModelList);
-       progressDialog.setTitle("Welcome to GoMart");
-       progressDialog.setMessage("please wait...");
-       progressDialog.setCanceledOnTouchOutside(false);
-       progressDialog.show();
+      // progressDialog.setTitle("Welcome to GoMart");
+      // progressDialog.setMessage("please wait...");
+      // progressDialog.setCanceledOnTouchOutside(false);
+      // progressDialog.show();
 
         //category
         catRecyclerview.setLayoutManager(new LinearLayoutManager(getActivity(),RecyclerView.HORIZONTAL,false));
@@ -134,10 +135,11 @@ public class HomeFragment extends Fragment {
                         if (task.isSuccessful()) {
                             for (QueryDocumentSnapshot document : task.getResult()) {
 
+
                                 CategoryModel categoryModel=document.toObject(CategoryModel.class);
                                 categoryModelList.add(categoryModel);
                                 categoryAdapter.notifyDataSetChanged();
-                                progressDialog.dismiss();
+                                //progressDialog.dismiss();
 
                             }
                         } else {
